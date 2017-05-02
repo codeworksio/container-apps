@@ -1,0 +1,10 @@
+version: '2'
+services:
+  portainer:
+    image: portainer/portainer:1.12.4
+    container_name: portainer
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    network_mode: host
+    command: [ --bind, ":9999", --templates, "https://raw.githubusercontent.com/portainer/templates/master/templates.json" ]
+    restart: always

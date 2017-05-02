@@ -1,0 +1,45 @@
+{
+  "api_version": "v1",
+  "title": "{{PORTAINER_TITLE}}",
+  "wizard": [
+    {
+      "title": "{{PORTAINER_SUBTITLE}}",
+      "schema": {
+        "name": {
+          "title": "Name:",
+          "description": "{{PORTAINER_NAME}}",
+          "type": "string",
+          "required": true
+        },
+        "bind": {
+          "title": "Bind:",
+          "description": "{{PORTAINER_BIND}}",
+          "type": "string",
+          "required": true
+        },
+        "templates": {
+          "title": "Templates:",
+          "description": "{{PORTAINER_TEMPLATES}}",
+          "type": "string",
+          "required": true
+        }
+      },
+      "form": [ "*" ]
+    }
+  ],
+  "binding": {
+    "type": "yaml",
+    "file": "docker-compose.yml",
+    "data": {
+      "name": [
+        "services.portainer.container_name"
+      ],
+      "bind": [
+        "services.portainer.command[1]"
+      ],
+      "templates": [
+        "services.portainer.command[3]"
+      ]
+    }
+  }
+}

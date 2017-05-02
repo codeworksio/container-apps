@@ -1,0 +1,7 @@
+{
+  "PORTAINER_TITLE": "Portainer",
+  "PORTAINER_SUBTITLE": "Configutation",
+  "PORTAINER_NAME": "Container name",
+  "PORTAINER_BIND": "IP address and port number",
+  "PORTAINER_TEMPLATES": "URL to applications definitions"
+}
