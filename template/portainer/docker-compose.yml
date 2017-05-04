@@ -6,5 +6,5 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     network_mode: host
-    command: [ --bind, ":9999", --templates, "https://raw.githubusercontent.com/portainer/templates/master/templates.json" ]
+    command: [ --bind, ":9999", --templates, "https://raw.githubusercontent.com/codeworksio/portainer-docker-apps/master/templates.json" ]
     restart: always
